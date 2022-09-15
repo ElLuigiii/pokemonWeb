@@ -1,0 +1,114 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center
+}
+.pokemonType {
+  display: flex;
+  border-radius: 30px;
+  justify-content: center;
+  border: solid .5px;
+  width: 30%;
+  margin: 0% 70%;
+}
+#div_nav{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0px ;
+}
+nav img{
+  height: 15vh;
+  width: 30vw;
+}
+nav h2{
+    color: black;
+}
+#btn_buscar{
+  border-radius: 1px;
+  height: 30px;
+  width: auto;
+  box-shadow: 0px 0px 16px 0px;
+  padding: 5px;
+}
+#btn_buscar:hover{
+  background-color: rgba(128, 128, 128, 0.397);
+}
+
+#input_nav{
+    margin: 10px;
+    height: 30px;
+    width: 350px;
+    padding: 0px 10px;
+    border-top: white;
+    border-right: white;
+    border-left: white;
+    box-shadow: 0px 0px 16px 0px;
+    position: relative
+}
+.input-icon{
+  height:50px
+}
+
+body {
+  background-color: white
+}
+#contenedor{
+    width: 75vw;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border: solid grey 3px;
+    border-radius: 10px;
+}
+#contenedor:hover {
+  color: grey;
+  box-shadow: 0 0 1px grey, 0 0 40px grey, 0 0 80px grey;
+}
+main img {
+    height: 200px;
+    width: 150px;
+    filter: drop-shadow(8px 8px 4px)
+}
+.container-img {
+    border: solid 1px black;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /*align-items: center;*/
+    /*justify-content: center;*/
+    margin:  10px auto 50px auto  ;
+    border-radius: 5px;
+    padding: 10px;
+    overflow: hidden;
+    transition: 0.2s;
+
+}
+.container-img:hover{
+  color: grey;
+  box-shadow: 0 0 1px grey, 0 0 40px grey, 0 0 80px grey;
+}
+.namePokemon {
+    color:grey;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black,
+}
+.element {
+  border: solid black
+}
+@media screen and (max-width: 700px){
+  nav img{
+    width: 100vw;
+    width: 70vw;
+
+  }
+}
