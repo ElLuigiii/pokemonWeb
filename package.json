@@ -1,0 +1,19 @@
+{
+  "name": "pokeapi",
+  "version": "1.0.0",
+  "description": "That is a mini proyect with PokeAPI",
+  "main": "index.js",
+  "scripts": {
+    "test": "run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElLuigiii/myPokeWeb.git"
+  },
+  "author": "Luis Alvarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElLuigiii/myPokeWeb/issues"
+  },
+  "homepage": "https://github.com/ElLuigiii/myPokeWeb#readme"
+}

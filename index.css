@@ -27,6 +27,7 @@ nav{
 nav img{
   height: 15vh;
   width: 30vw;
+  box-shadow: 5px 5px 5px 5px;
 }
 nav h2{
     color: black;
@@ -58,7 +59,8 @@ nav h2{
 }
 
 body {
-  background-color: white
+  background: rgb(34,193,195);
+  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
 }
 #contenedor{
     width: 75vw;
@@ -66,12 +68,16 @@ body {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    border: solid grey 3px;
     border-radius: 10px;
 }
 #contenedor:hover {
-  color: grey;
-  box-shadow: 0 0 1px grey, 0 0 40px grey, 0 0 80px grey;
+  color: whitesmoke;
+  box-shadow: 0 0 1px whitesmoke, 0 0 40px white, 0 0 80px white;
+  border: soloid black .5px;
+}
+.containerGrande{
+  margin: 0vw 10vw;
+  border-radius: 5px;
 }
 main img {
     height: 200px;
@@ -93,17 +99,24 @@ main img {
 
 }
 .container-img:hover{
-  color: grey;
-  box-shadow: 0 0 1px grey, 0 0 40px grey, 0 0 80px grey;
+  color: white;
+  box-shadow: 0 0 1px white, 0 0 40px white, 0 0 80px white;
+}
+#buttons {
+  margin:  5px 0 0 0 ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .namePokemon {
-    color:grey;
-    font-size: 30px;
+    color: white;
+    font-size: px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: black,
+    color: white,
 }
-.element {
-  border: solid black
+.boton_Nav {
+  color: red;
+  margin: 5px 5px;
 }
 @media screen and (max-width: 700px){
   nav img{
