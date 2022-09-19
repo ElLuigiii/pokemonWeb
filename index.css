@@ -1,141 +1,222 @@
+
 *{
-    margin: 0px;
-    padding: 0px;
-    
+  margin: 0px;
+  padding: 0px;
 }
 body {
-  background: rgb(34,193,195);
-  background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-  border-bottom: none;}
-nav{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center
+margin-top: 2vw;
+background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+border-bottom: none;
+}
+#firstChild{
+  margin-left: 15vw;
 }
 .pokemonType {
-  display: flex;
-  border-radius: 30px;
-  justify-content: center;
-  border: solid .5px;
-  width: 30%;
-  margin: 0% 70%;
+display: flex;
+border-radius: 30px;
+justify-content: center;
+border: 1px solid rgba(255, 255, 255, 0.35);
+width: 30%;
+margin: .5vw 0.1vw ;
+padding: 0 0.1vw;
 }
 #div_nav{
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  margin: 30px 0px ;
+  width: 100%;
+  margin-top: 0px;
+  border: solid 2px;
+  border-radius: 30px;
+  margin-bottom: 5vw;
 }
-nav img{
-  height: 15vh;
-  width: 30vw;
-  box-shadow: 5px 5px 5px 5px;
+nav img{    
+  height: 10vw;
+  border-radius: 100px;
+  position: fixed;
+  border: solid 1px;
+  color: black;
 }
-nav h2{
-    color: black;
+nav img:hover {
+filter: opacity(1);
+border: solid red .5px;
+}
+nav a {    
+letter-spacing: 1px;
+font-weight: bolder;
+text-decoration: none;
+margin: 0 1rem;
+font-size: 1.5rem;
 }
 #btn_buscar{
-  border-radius: 1px;
-  height: 30px;
-  width: auto;
-  box-shadow: 0px 0px 16px 0px;
-  padding: 5px;
+border-radius: 1px;
+height: 30px;
+width: auto;
+box-shadow: 0px 0px 16px 0px;
+padding: 5px;
+display: none;
 }
 #btn_buscar:hover{
-  background-color: rgba(128, 128, 128, 0.397);
+background-color: rgba(128, 128, 128, 0.397);
+transition: 2s;
 }
 
 #input_nav{
-    margin: 10px;
-    height: 30px;
-    width: 350px;
-    padding: 0px 10px;
-    border-top: white;
-    border-right: white;
-    border-left: white;
-    box-shadow: 0px 0px 16px 0px;
-    position: relative
+  display: none;
+  /*
+  aca desaparecemos el input del nav
+  */
+  margin: 10px;
+  height: 30px;
+  width: 350px;
+  padding: 0px 10px;
+  border-top: white;
+  border-right: white;
+  border-left: white;
+  box-shadow: 0px 0px 16px 0px;
+  position: relative
 }
 .input-icon{
-  height:50px
+height:50px
 }
 #contenedor{
-    width: 75vw;
-    margin: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  border-radius: 10px;
 }
 #contenedor:hover {
-  color: whitesmoke;
-  box-shadow: 0 0 1px whitesmoke, 0 0 40px white, 0 0 80px white;
-  border: soloid black .5px;
+color: red;
+box-shadow: 0 0 1px whitesmoke, 0 0 40px white, 0 10px 48px white;
+transition: .5s
 }
 .containerGrande{
-  margin: 0vw 10vw;
-  border-radius: 5px;
+margin: 0vw 10vw;
+border-radius: 5px;
+}
+nav{
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: rgba(235, 148, 45, 1);
+  transition: 1s;
+  filter: drop-shadow(3px 2px 10px);
+}
+nav:hover{
+  filter: drop-shadow(6px 5px 20px);
+}
+nav a:hover{
+  transition: 1s;
+  color: white;
+}
+nav a{
+  color: black;
 }
 main img {
-    height: 200px;
-    width: 150px;
-    filter: drop-shadow(8px 8px 4px)
+  height: 200px;
+  width: 150px;
+  filter: drop-shadow(8px 2px 9px);
+  border: solid grey .5px;
+  padding: 10px;
+  margin-top: 10px;
+  
+
 }
 .container-img {
-    border: solid 1px black;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    /*align-items: center;*/
-    /*justify-content: center;*/
-    margin:  10px auto 50px auto  ;
-    border-radius: 5px;
-    padding: 10px;
-    overflow: hidden;
-    transition: 0.2s;
+  border: solid 1px black;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  /*justify-content: center;*/
+  margin:  10px auto 50px auto  ;
+  border-radius: 5px;
+  padding: 0 10px;
+  color: black;
+  overflow: hidden;
+  position: relative;
 
 }
 .container-img:hover{
-  color: white;
-  box-shadow: 0 0 1px white, 0 0 40px white, 0 0 80px white;
+color: white;
+box-shadow: 0 0 3px black, 0 0 100px black, 1pc 1pc 1pc black;
 }
 #buttons {
-  margin:  5px 0 0 0 ;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+margin:  5px 0 0 0 ;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 .namePokemon {
-    color: white;
-    font-size: px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: white,
+  color: white;
+  font-size: px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: white,
 }
 .boton_Nav {
-  color: black;
-  background-color:rgba(34,193,195,1);
-  padding: 10px;
-  margin: 5px 5px;
-}
-footer{
-  margin: 5vw 0 0 0;
+  width: 130px;
+  height: 50px;
+  background: rgba(255, 255, 255, 0.1);
+  margin: 0 2vw;
+  border-radius: 60px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+  letter-spacing: 2px;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.35);
+  border-left: 0.5px solid rgba(255, 255, 255, 0.35);
+  padding-left: 15px;
+  transition: .5s;
+  position: relative;
+  overflow: hidden;
+}
+.boton_Nav:hover{
+  padding-left: 0px;
+  padding-right: 15px;
+  color: black;
+}
+
+.boton_Nav:after, .container-img:after{
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 100%;
+  z-index: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(-170px) skewX(30deg);
+  transition: 0.75s ease-in-out;
+}
+.boton_Nav:hover:after {
+  transform: translateX(170px) skewX(30deg);
+}
+.container-img:hover:after{
+  transform: translateX(260px) skewX(30deg);
+}
+#typesPokemon{
+display: flex;
+justify-content: end;
+
+}
+footer{
+margin: 5vw 0 0 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
 }
 .footer-links{
-  display: flex;
+display: flex;
 }
 .footer-links a{
-  margin: .5vw .5vw;
+margin: .5vw .5vw;
+}
+.fuego{
+  color: red;
+}
+.grasoso{
+  color: green;
 }
 @media screen and (max-width: 700px){
-  nav img{
-    width: 100vw;
-    width: 70vw;
-
-  }
+nav img{
+ border: solid grey
+}
 }
