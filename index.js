@@ -35,9 +35,9 @@ const ImprimirPokemons = async (data) => {
             //console.log(cumplido)
             templateHTML =`
             <div class="container-img">
-            <h1 class"namePokemon>${resultado.name}</h1>
-            <p class"pokemonType">${resultado.types[0].type.name}</p>
-            <img class"img-pokemon" src=${resultado.sprites.other.dream_world.front_default} alt="${resultado.name}"/>
+            <img class="img-pokemon" src=${resultado.sprites.other.dream_world.front_default} alt="${resultado.name}"/>
+            <h1 class="namePokemon">${resultado.name}</h1>
+            <p class="pokemonType">${resultado.types[0].type.name}</p>
             </div>
             `
             container.innerHTML+=templateHTML
@@ -105,5 +105,3 @@ function buscarPokemon() {
     .catch (error => console.log(error))
 }
 botonNuevo.addEventListener('click', buscarPokemon)
-
-
