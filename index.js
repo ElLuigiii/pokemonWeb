@@ -48,6 +48,9 @@ const ImprimirPokemons = async (data) => {
         console.log(error)
     }
 }
+window.addEventListener('load', ()=> {
+    console.log('cargando')
+})
 const GetPokemons = async (url) => {
     try {
         const response = await fetch(url)
