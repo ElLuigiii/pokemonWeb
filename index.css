@@ -1,15 +1,29 @@
-
 *{
   margin: 0px;
   padding: 0px;
 }
 body {
-margin-top: 2vw;
-background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-border-bottom: none;
+/*background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
+*/
+background-image: url(pokebola.jpg);
+text-align: center;
+height: 100vh;
+backdrop-filter: brightness(0.5);
 }
+#poke-container{
+  display: flex;
+  height: 2rem;
+  align-content: flex-end;
+}
+#poke-container p {
+  font-size: 25px;
+  filter: none;
+  /* border: solid; */
+  font-family: fantasy;
+  margin: 0 1vw;
+  font-style: italic;}
 #firstChild{
-  margin-left: 15vw;
+  margin-left: 10vw;
 }
 .pokemonType {
 display: flex;
@@ -25,101 +39,169 @@ padding: 0 0.1vw;
   align-items: center;
   width: 100%;
   margin-top: 0px;
-  border: solid 2px;
-  border-radius: 30px;
-  margin-bottom: 5vw;
 }
-nav img{    
-  height: 10vw;
-  border-radius: 100px;
-  position: fixed;
-  border: solid 1px;
-  color: black;
-}
-nav img:hover {
-filter: opacity(1);
-border: solid red .5px;
-}
-nav a {    
-letter-spacing: 1px;
-font-weight: bolder;
-text-decoration: none;
-margin: 0 1rem;
-font-size: 1.5rem;
-}
-#btn_buscar{
-border-radius: 1px;
-height: 30px;
-width: auto;
-box-shadow: 0px 0px 16px 0px;
-padding: 5px;
-display: none;
-}
-#btn_buscar:hover{
-background-color: rgba(128, 128, 128, 0.397);
-transition: 2s;
+nav {
+  text-align: center;
+  align-items: center;
+  cursor: pointer;
+  background-color: rgba(235, 148, 45, 1);
+  transition: 1s;
+  text-transform: uppercase;
 }
 
-#input_nav{
-  display: none;
-  /*
-  aca desaparecemos el input del nav
-  */
-  margin: 10px;
-  height: 30px;
-  width: 350px;
-  padding: 0px 10px;
-  border-top: white;
-  border-right: white;
-  border-left: white;
-  box-shadow: 0px 0px 16px 0px;
-  position: relative
+nav:hover{
+  filter: drop-shadow(6px 5px 20px);
 }
+nav a {
+  color: black;
+}
+nav a:hover{
+  transition: 1s;
+  color: white;
+  text-decoration: underline;
+
+}
+nav a {
+letter-spacing: 1px;
+text-decoration: none;
+margin: 0rem 1rem 0 0;
+font-size: 1rem;
+letter-spacing: 5px;
+}
+
+ /*hasta ac a*/
+#search_pokemon{
+  position: absolute;
+  height: 40px;
+  width: 0px;
+  border: 1px solid black;
+  border-radius: -30px;
+  padding: 0 0px;
+  transition: all 0.6s ease;
+}
+/*
+textos de h1 y p
+*/
+h2, p{
+  letter-spacing: 2px;
+  color: white;
+  cursor: -webkit-grab;
+}
+#span_pokemon{
+  font-family: 'Pokemon Solid';
+}
+#go_Home{
+  color: whitesmoke;
+  width: 30%;
+  outline: none;
+  background-color: rgba(255, 13, 0, 0.785);
+  justify-content: center;
+  margin: auto;
+  padding: 6px 0px;
+  border-radius: 6px;
+}
+#content_main{
+  display: flex;
+  flex-direction: row;
+}
+.content_section_main{
+  display: flex;
+  flex-direction: column;
+}
+h2, p {
+  color:white;
+  filter: drop-shadow(-3px -3px 1px black);
+}
+.img-fluid{
+  width: 51%;
+  filter: drop-shadow(12px 13px 4px black);
+  transition: all 0.75ms;
+}
+.img-fluid:hover {
+  filter: drop-shadow(7px 4px 6px white);
+}
+.btn:hover{
+  cursor: pointer;
+}
+#section_search_p{
+  display: flex;
+  margin-top: 10px;
+  margin-left: 5%;
+  align-items: center;
+  position: absolute;
+  height: 10vh;
+}
+#section_search_p input {
+  height: 20px;
+  padding-left: 20px;
+  border-radius: 45px;
+  width: 0;
+  text-align: center;
+  transition: all 0.6s ease;
+}
+#section_search_p button {
+  border-radius: 50%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.777);
+  height: 25px;
+  width: 25px;
+}
+#section_search_p:hover input {
+  width: 200px;
+}
+#section_search_p input:focus{
+  width: 200px;
+}
+#section_search_p button:hover input{
+  background-color: grey;
+}
+
+.btn i {
+  width: 40px;
+  height: 34px;
+  background-color: rgba(128, 128, 128, 0.45);
+  border: solid .5px;
+  position: absolute;
+  top: -5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* section search es buscar en el video*/
+#section_Search{
+  position: absolute;
+  margin-left: 5vw;
+}
+#section_Search:hover input{
+  width: 240px;
+}
+#section_Search input:focus {
+  width: 240px;
+  color: grey;
+  left: 38px
+}
+
 .input-icon{
 height:50px
 }
 #contenedor{
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  border-radius: 10px;
+  margin-top: 10vh;
 }
-#contenedor:hover {
-color: red;
-box-shadow: 0 0 1px whitesmoke, 0 0 40px white, 0 10px 48px white;
-transition: .5s
-}
-.containerGrande{
-margin: 0vw 10vw;
-border-radius: 5px;
-}
-nav{
-  border-radius: 30px;
-  cursor: pointer;
-  background-color: rgba(235, 148, 45, 1);
-  transition: 1s;
-  filter: drop-shadow(3px 2px 10px);
-}
-nav:hover{
-  filter: drop-shadow(6px 5px 20px);
-}
-nav a:hover{
-  transition: 1s;
-  color: white;
-}
-nav a{
-  color: black;
-}
+/*
+Contenedor de tarjetas
 main img {
   height: 200px;
   width: 150px;
   filter: drop-shadow(8px 2px 9px);
+  transition: 1s;
+  cursor: pointer;
   border: solid grey .5px;
   padding: 10px;
   margin-top: 10px;
-  
-
 }
+*/
+
 .container-img {
   border: solid 1px black;
   border-radius: 10px;
@@ -136,8 +218,8 @@ main img {
 
 }
 .container-img:hover{
-color: white;
 box-shadow: 0 0 3px black, 0 0 100px black, 1pc 1pc 1pc black;
+transition: 0.5s;
 }
 #buttons {
 margin:  5px 0 0 0 ;
@@ -147,9 +229,27 @@ align-items: center;
 }
 .namePokemon {
   color: white;
-  font-size: px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: white,
+  letter-spacing: 3px;
+  /*
+  text-shadow: -3px -3px 3px #0000DF, 3px -3px 3px #0000DF, -3px 3px 3px;
+  */
+  font-family: 'Pokemon Solid', Tahoma, Geneva, Verdana, sans-serif;
+}
+h1 {
+  font-family: 'Pokemon Solid', Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: 3px;
+  color: white;
+  filter: drop-shadow(3px 3px 3px black);
+}
+#section_Search {
+  margin-left: 5vw;
+  /* border: solid black; */
+  /* margin: 5px 0px 7px 1rem; */
+  width: min-content;
+  padding: 3px;
+  display: flex;
+  justify-content: flex-start;
+  /* flex-direction: row-reverse; */
 }
 .boton_Nav {
   width: 130px;
@@ -197,6 +297,13 @@ justify-content: end;
 
 }
 footer{
+  border: solid;
+}
+/* 
+ffffffffffffffffffffffoooooooooooottttttttteeeeeeeeeeeeeeeerrrrrrrrrrrrrrr
+
+
+footer{
 margin: 5vw 0 0 0;
 display: flex;
 flex-direction: column;
@@ -209,14 +316,10 @@ display: flex;
 .footer-links a{
 margin: .5vw .5vw;
 }
-.fuego{
-  color: red;
-}
-.grasoso{
-  color: green;
-}
+
+
+*/
 @media screen and (max-width: 700px){
-nav img{
- border: solid grey
-}
+  nav img{border: solid grey
+  }
 }
