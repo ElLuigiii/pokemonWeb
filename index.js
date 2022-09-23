@@ -4,11 +4,13 @@ let templateHTML
 const buttons = document.getElementById('buttons')
 const container = document.getElementById('contenedor')
 const urlApi= 'https://pokeapi.co/api/v2/pokemon/'
-const botonNuevo = document.getElementById('btn_buscar')
-const inputBuscar = document.getElementById('input_nav')
+const btn_buscar_pokemon = document.getElementById('btn_buscar_p')
+const inputBuscar = document.getElementById('input_search_p')
+
 
 const ImprimirBotones = (data) => {
     let boton_container = document.getElementById('buttons')
+    let containerGrande = document.getElementById('containerGrande')
     if(data.next && data.previous){
         btnNext= `<button class="boton_Nav" data-url=${data.next}>Siguiente</button>`
         btnPrevious=`<button class="boton_Nav" data-url=${data.previous}>Anterior</button>`
@@ -51,9 +53,10 @@ const ImprimirPokemons = async (data) => {
 window.addEventListener('load', ()=> {
     console.log('cargando')
 })
+
 const GetPokemons = async (url) => {
     try {
-        const response = await fetch(url)
+        const response = await fetch(`${url}?limit=3`)
         const result = await response.json()
         console.log(result)
         removeChild(buttons)
@@ -67,7 +70,8 @@ const GetPokemons = async (url) => {
     catch (error){
         console.log(error)
     }
-}
+} //esta con 3 pokemon de limite en la peticion GetPokemon
+
 GetPokemons(urlApi)
 buttons.addEventListener('click', (e) =>{
     if(e.target.classList.contains('boton_Nav')){
@@ -107,4 +111,4 @@ function buscarPokemon() {
     })
     .catch (error => console.log(error))
 }
-botonNuevo.addEventListener('click', buscarPokemon)
+btn_buscar_pokemon.addEventListener('click', buscarPokemon)
