@@ -4,34 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="http://fonts.cdnfonts.com/css/pokemon-solid" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <title>My PokeWeb</title>
 </head>
 <body>
     <header>
-        <nav>
-            <div id="div_nav">
-                <img alt="imagen-pokeApi" src="pokeApi.png" id="icon_Image">
+            <nav>
+            <div id="poke-container" >
+                <p>Pokedex</p>
+                <!-- 
                     <a href="#" id="firstChild">Home</a>
-                    <a href="#">Pokemons</a>
-                    <a href="#" id="btn_margin">Buscar</a>
-                <input type="text" placeholder="Buscar Pokemon" id="input_nav">
-                <button id="btn_buscar"> Buscar</button>
+                <a href="#">Pokedex</a>
+                <a href="#" id="btn_margin">Buscar</a>
+                -->
             </div>
-        </nav>
+            </nav>
+
     </header>
-
-    <main>
-        
-        <div class="containerGrande">
-            <div id="contenedor"></div>
-            <div class="buttons" id="buttons"></div>
-        </div>
-    </main>
-
-    <footer>
+        <main>
+            <img class="img-fluid logo" src="https://res.cloudinary.com/dioxkbk6g/image/upload/v1569205776/Pokeapi/logo-6221638601ef7fa7c835eae08ef67a16_xokydx.png" alt="Pokeapi">
+            <div id="content_main">
+                <section class="content_section_main">
+                    <h2>Bienvenidos al mundo <span id="span_pokemon"> Pokemon</span></h2>
+                    <p>Donde podrás encontrar tus <span id="span_pokemon">Pokemon</span> favoritos y más.</p>
+                    <a href="home.html" id="go_Home">Acceder</a>
+                </section>
+                <img class="img-fluid" src="https://res.cloudinary.com/dioxkbk6g/image/upload/v1569205854/Pokeapi/Generation1-Starters-1024x467_dqfrvt.png" alt="Imagen de pokemons">
+            </div>
+        </main>
+        <footer style=" display: none">
         <p>All right reserved by Github Pages</p>
-        <p>Created By Luis Álvarez</p> 
+        <p>Created By Luis Álvarez</p>
         <section class="footer-links">
             <a href="#">Linkedin</a> <a href="#">Github</a>
         </section>
