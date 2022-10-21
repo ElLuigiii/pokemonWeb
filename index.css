@@ -1,29 +1,61 @@
-*{
+ *{
   margin: 0px;
   padding: 0px;
 }
 body {
 /*background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);
-*/
+
 background-image: url(pokebola.jpg);
 text-align: center;
 height: 100vh;
 backdrop-filter: brightness(0.5);
 }
+
 #poke-container{
   display: flex;
-  height: 2rem;
-  align-content: flex-end;
 }
 #poke-container p {
   font-size: 25px;
   filter: none;
   /* border: solid; */
   font-family: fantasy;
-  margin: 0 1vw;
-  font-style: italic;}
+
+  color:white;
+  font-style: italic;
+}
+/*
+
+main {
+  display: flex;
+  backdrop-filter: brightness(0.5);
+  flex-direction: column;
+  justify-content: space-between;
+}
+*/
+main{
+  grid-template-columns: auto;
+}
+.div_dos{
+  margin-top: 3em
+}
+body {
+  background-image: url(pokebola.jpg);
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+  
+  display: flex;
+  flex-direction: column;
+}
+#poke-container{
+  display: flex;
+  color: white;
+}
 #firstChild{
   margin-left: 10vw;
+}
+#poke-container p:hover{
+  color: black;
 }
 .pokemonType {
 display: flex;
@@ -38,35 +70,41 @@ padding: 0 0.1vw;
   display: flex;
   align-items: center;
   width: 100%;
+  height: 10vh;
   margin-top: 0px;
+}
+#div_nav img{
+  height: 10vh;
+  width: 30vw;
 }
 nav {
   text-align: center;
   align-items: center;
   cursor: pointer;
   background-color: rgba(235, 148, 45, 1);
-  transition: 1s;
+  transition: 100ms;
   text-transform: uppercase;
 }
 
 nav:hover{
-  filter: drop-shadow(6px 5px 20px);
-}
-nav a {
-  color: black;
+  filter: drop-shadow(6px 5px 10px blue);
 }
 nav a:hover{
-  transition: 1s;
-  color: white;
-  text-decoration: underline;
+  transition: 10ms;
+  color: yellow
 
 }
 nav a {
-letter-spacing: 1px;
-text-decoration: none;
-margin: 0rem 1rem 0 0;
-font-size: 1rem;
-letter-spacing: 5px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-style: normal;
+  margin: 0rem 1rem 0 0;
+  color: white;
+  text-shadow: 5px 5px 5px 5px;
+  font-size: 2rem;
+  text-shadow: 3px 0px 0px blue;
+  /* letter-spacing: 5px; */
+  color: yellow;
 }
 
  /*hasta ac a*/
@@ -85,10 +123,18 @@ textos de h1 y p
 h2, p{
   letter-spacing: 2px;
   color: white;
-  cursor: -webkit-grab;
 }
 #span_pokemon{
+  /*
+  text-shadow: -1px -1px 1px #000, 1px 1px 1px #000, -1px 1px 1px #000, 1px -1px 1px #000;
   font-family: 'Pokemon Solid';
+  color:orange;
+  text-shadow: -1px -1px -1px -1px -1px blue;
+  */
+-webkit-text-fill-color: #fcbd00;
+-webkit-text-stroke: 0.3px blue;
+font-family: 'Pokemon Solid';
+font-size: 1em;
 }
 #go_Home{
   color: whitesmoke;
@@ -108,14 +154,19 @@ h2, p{
   display: flex;
   flex-direction: column;
 }
-h2, p {
+h2{
+  text-decoration-color: aquamarine;
+  font-size: 1.5em;
   color:white;
   filter: drop-shadow(-3px -3px 1px black);
+}
+h2{
+  font-size: 2.5em;
 }
 .img-fluid{
   width: 51%;
   filter: drop-shadow(12px 13px 4px black);
-  transition: all 0.75ms;
+  transition: all .5s;
 }
 .img-fluid:hover {
   filter: drop-shadow(7px 4px 6px white);
@@ -123,13 +174,12 @@ h2, p {
 .btn:hover{
   cursor: pointer;
 }
-#section_search_p{
-  display: flex;
-  margin-top: 10px;
-  margin-left: 5%;
-  align-items: center;
-  position: absolute;
-  height: 10vh;
+*{
+  margin: 0px;
+  padding: 0;
+}
+#section_search_p {
+margin: 3vw
 }
 #section_search_p input {
   height: 20px;
@@ -154,6 +204,9 @@ h2, p {
 }
 #section_search_p button:hover input{
   background-color: grey;
+}
+#btn_buscar_p:hover{
+  background-color: rgba(196, 27, 27, 0.805);
 }
 
 .btn i {
@@ -184,9 +237,14 @@ h2, p {
 .input-icon{
 height:50px
 }
-#contenedor{
+#contenedor {
   display: flex;
+  /* flex-flow: wrap; */
+  flex-wrap: wrap;
   margin-top: 10vh;
+}
+.img-pokemon{
+  filter: drop-shadow(7px 4px 6px black);
 }
 /*
 Contenedor de tarjetas
@@ -208,9 +266,10 @@ main img {
   display: flex;
   flex-direction: column;
   /*align-items: center;*/
-  /*justify-content: center;*/
-  margin:  10px auto 50px auto  ;
+  justify-content: center;
+  margin:  50px auto 50px auto  ;
   border-radius: 5px;
+  max-width: 26%;
   padding: 0 10px;
   color: black;
   overflow: hidden;
@@ -299,7 +358,7 @@ justify-content: end;
 footer{
   border: solid;
 }
-/* 
+/*
 ffffffffffffffffffffffoooooooooooottttttttteeeeeeeeeeeeeeeerrrrrrrrrrrrrrr
 
 
