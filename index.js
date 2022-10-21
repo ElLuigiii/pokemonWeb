@@ -56,7 +56,7 @@ window.addEventListener('load', ()=> {
 
 const GetPokemons = async (url) => {
     try {
-        const response = await fetch(`${url}?limit=3`)
+        const response = await fetch(`${url}?limit=10`)
         const result = await response.json()
         console.log(result)
         removeChild(buttons)
